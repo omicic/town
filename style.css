@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400, 600,700,900|Slabo+27px');
+
+:root {
+    --plava: rgb(52, 150, 216);
+    --tamnoSiva: #302e2e;
+    --siva:#b1a9a9;
+    --bela: #fff;
+    --padding: 50px 0;
+    --transition: .2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+button{
+    background: var(--plava);
+    padding: 10px 50px;
+    color: var(--bela);
+    font-size: 1.3rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+button:hover{
+    opacity: .5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/***header**/
+header {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--bela);
+    font-weight: 600;
+}
+
+nav h3 a {
+    font-size: 1.7rem;
+    transition: var(--transition);
+}
+
+nav h3 a:hover {
+    color: var(--plava);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    margin: 0 30px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--plava);
+}
+
+header .mainHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bela);
+    padding: 300px 0;
+}
+
+.mainHeader h1 {
+    font-size: 5rem;
+}
+
+.mainHeader h3 {
+    font-size: 2rem;
+  
+}
+
+.mainHeader p{
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+
+
+/***intro***/
+.intro{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var(--padding);
+  
+}
+
+.intro article {
+    flex: 0 0 49%;
+}
+
+.intro h3, .ourworks h3 {
+    color: var(--plava);
+    font-size: 2.6rem;
+    padding-bottom: 20px;
+}
+
+.intro  p, .ourworks article p{
+    color: var(--tamnoSiva); 
+    padding-bottom: 20px;
+} 
+
+/***trafic***/
+.trafic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+}
+
+.trafic article {
+    flex: 0 0 30%;
+    text-align: center;
+}
+
+.trafic article i{
+    color: var(--plava);
+    font-size: 4rem;
+    padding-bottom: 20px;
+}
+.trafic article h3{
+    color: var(--plava);
+    padding-bottom: 20px;
+}
+.trafic article p{
+    padding: 10px;
+    font-size: 0.9rem;
+    color: var(--tamnoSiva);
+}
+
+/***ourworks***/
+.ourworks{
+    text-align: center;
+    padding: var(--padding);
+}
+
+.ourworks article:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ourworks .wrapper {
+    flex: 0 0 29%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 30px;
+    border-bottom: 10px solid var(--plava);
+}
+.ourworks span{
+    z-index: 1;
+    
+    margin-bottom: -45px;
+    background: rgba(52, 150, 216, .5);
+    color: var(--bela);
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.ourworks .wrapper img{
+    /* display: block; */
+
+}
+
+
+
+/***contactus***/
+.contactus {
+    background: url(img/footer.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--bela);
+    padding: var(--padding);
+}
+
+.contactus h2{
+    font-size: 3rem;
+}
+.contactus h2::after{
+    content: "";
+    width: 250px;
+    display: block;
+    background: var(--bela);
+    height: 5px;
+    margin-bottom: 20px;
+}
+
+.contactus article:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-center;
+    padding: var(--padding);
+}
+
+.contactus article:nth-child(2) p{
+    flex: 0 0 50%;
+    padding: 30px;
+    font-size: 1.1rem;
+}
+.contactus article:nth-child(2) form{
+    flex: 0 0 50%;
+    padding: 0 30px;
+}
+
+.contactus form input{
+    padding: 14px;
+    border-radius: 0;
+    border: none;
+}
+
+.contactus form button{
+    border-radius: 0;
+    position: relative;
+    left: -5px;
+    top: 2px;
+    padding-bottom: 11px;
+    text-transform: uppercase;
+}
+
+
